@@ -1,4 +1,4 @@
-# Analysis-notes# Analysis Notes
+# Analysis Notes
 
 This repository contains my personal notes on mathematical analysis.
 

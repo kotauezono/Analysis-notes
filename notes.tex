@@ -1,0 +1,92 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xeCJK}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Example}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+
+\title{Analysis Notes}
+\author{Kota Uezono}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{thm}[H\"older's inequality]
+    Let $p,q\in[1, \infty]$ satisfy
+    $\frac{1}{p}+\frac{1}{q}=1$
+    and let $f$ and $g$ be measurable functions.
+    Then
+    \[
+    \|fg\|_{1}
+    \le
+    \|f\|_{p}\|g\|_{q}
+    \]
+\end{thm}
+
+\begin{proof}
+    The case $p=\infty$ is trivial.
+    Assume $p,q<\infty$.
+    We first prove the following auxiliary inequality:
+    If $s,t>0$, then
+    \[
+    st\le\frac{s^p}{p}+\frac{t^q}{q}.
+    \]
+    Let $\sigma,\tau\in\mathbb{R}$, and set $s=e^{\sigma},t=e^{\tau}$.
+    Since $e^x$ is convex and
+    \[
+    \frac{1}{p}+\frac{1}{q}=1
+    \]
+    we obtain
+    \[
+    e^{\sigma+\tau} \le \frac{e^{p\sigma}}{p}+\frac{e^{q\tau}}{q}.
+    \]
+    Hence
+    \[
+    st\le\frac{s^p}{p}+\frac{t^q}{q}.
+    \]
+    Using this inequality for $(s,t)=(|f|,|g|)$, we obtain
+    \[
+    |fg|\le\frac{|f|^p}{p}+\frac{|g|^q}{q}.
+    \]
+    Integrating both sides, we obtain
+    \begin{equation}
+    \|fg\|_{1}\le\frac{\|f\|_{p}^{p}}{p}+\frac{\|g\|_{q}^{q}}{q}.
+    \label{eq:holder-key}
+    \end{equation}
+    Setting $C=\|f\|_{p}\|g\|_{q},\tilde{f}=\frac{f}{\|f\|_{p}},\tilde{g}=\frac{g}{\|g\|_{q}}$,
+    we obtain
+    \[
+    \|\tilde{f}\|_{p}^{p}=\|\tilde{g}\|_{q}^{q}=1
+    \]
+    The case $C=\infty$ is trivial.
+    So, let $C<\infty$.
+    Then, 
+    \[
+    C^{-1}\|fg\|_{1}=\|\tilde{f}\tilde{g}\|_{1}\overset{\eqref{eq:holder-key}}\le\frac{\|\tilde{f}\|_{p}^{p}}{p}+\frac{\|\tilde{g}\|_{q}^{q}}{q}=\frac1p+\frac1q=1.
+    \]
+    Multiplying both sides by $C$, we obtain
+    \[
+    \|fg\|_1 \le \|f\|_p\|g\|_q.
+    \]
+
+
+\end{proof}
+
+
+\end{document}

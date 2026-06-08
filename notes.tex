@@ -127,6 +127,22 @@
     Applying the above inequality pointwise to $s=f(x),t=g(x)$, and integrate both sides, we obtain (2).\\
     Proof of \eqref{eq:Minkowski-key2}:
     Note that 
+    \[
+    \|h\|_{p}^{p}=\|h^{p}\|_{1}=\|hh^{p-1}\|_{1}\le\|fh^{p-1}\|_{1}+\|gh^{p-1}\|_{1}
+    \],
+    \[
+    \|h^{p-1}\|_{q}=\|h\|_{p}^{p-1}(\text{Set}q=\frac{p}{p-1})
+    \],
+    we obtain
+    \[
+    \|fh^{p-1}\|_{1}+\|gh^{p-1}_{1}\overset{H\"older}\le\|f\|_{p}\|h^{p-1}\|_{q}+\|g\|_{p}\|h^{p-1}\|_{q}=(\|f\|_{p}+\|g\|_{p})\|h\|_{p}^{p-1}
+    \]
+    We proved (2), (3). So, we prove the desired inequality, using (1), (2).
+    The case $\|f\|_{p}+\|g\|_{p}=\infty$ is trivial.
+    Let $\|f\|_{p}+\|g\|_{p}<\infty$, we obtain $\|h\|_{p}<\infty$ by (2).Then, dividing both sides of (3) by $\|h\|_{p}^{p-1}$, we obtain
+    \[
+    \|f+g\|_{p}\le\|f\|_{p}+\|g\|_{p}.
+    \]
 
 
 

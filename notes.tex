@@ -88,5 +88,48 @@
 
 \end{proof}
 
+\begin{thm}[Minkowski's inequality]
+    Let $p\in[1,\infty]$, and $f,g:S\to\mathbb{C}$ is measurable function. Then,
+    \[
+    \|f+g\|_{p}\le\|f\|_{p}+\|g\|_{p}
+    \]
+\end{thm}
+
+\begin{proof}
+    we first prove the following auxiliary inequalities:
+    Set $h=|f+g|$. Then,
+    \begin{equation}
+         \|h\|_{p}^{p}\le2^{p-1}(\|f\|_{p}^{p}+\|g\|_{p}^{p}).
+        \label{eq:Minkowski-key1}
+    \end{equation}
+    \begin{equation}
+        \|h\|_{p}^{p}\le(\|f\|_{p}+\|g\|_{p})\|h\|_{p}^{p-1}.
+        \label{eq:Minkowski-key2}
+    \end{equation}
+    Proof of \eqref{eq:Minkowski-key1}:
+    Note that following inequality:
+    \[
+    s,t\in\mathbb{C}, |s+t|^p\le2^{p-1}(|s|^{p}+|t|^{p})
+    \]
+    By triangle inequality, 
+    \[
+    |s+t|\le|s|+|t|
+    \]
+    So, it suffices to prove the claim in the case $s,t\in[0,\infty)$.
+    Since $x\mapsto{x^{p}}$ is convex, we obtain
+    \[
+    \left(\frac{s+t}{2}\right)^p\le\frac{s^p}{2}+\frac{t^p}{2}
+    \]
+    Multiplying both sides by $2^p$, we obtain
+    \[
+    (s+t)^p\le2^{p-1}(s^p+t^p)
+    \]
+    Applying the above inequality pointwise to $s=f(x),t=g(x)$, and integrate both sides, we obtain (2).\\
+    Proof of \eqref{eq:Minkowski-key2}:
+    Note that 
+
+
+
+\end{proof}
 
 \end{document}

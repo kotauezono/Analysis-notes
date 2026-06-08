@@ -7,10 +7,10 @@ This repository contains my personal notes on mathematical analysis.
 ### Inequalities
 
 * Hölder's inequality
+* Minkowski's inequality
 
 ## Future Topics
 
-* Minkowski's inequality
 * Jensen's inequality
 * Fatou's lemma
 * Monotone Convergence Theorem
